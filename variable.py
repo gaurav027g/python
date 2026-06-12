@@ -5,7 +5,7 @@ age = 25
 price = 19.99
 
 # 3. String (Text surrounded by quotes)
-user_name = "Alice"
+user_name = "Prince"
 
 # 4. Boolean (True or False)
 is_logged_in = True
