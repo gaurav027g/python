@@ -12,10 +12,13 @@ is_logged_in = True
 
 country = "India"
 
+ocean ="Indian Ocean"
+
 # Printing the variables to see their value
 print(age)
 print(price)
 print(user_name)
 print(is_logged_in)
 print(country)
+print(ocean)
 
