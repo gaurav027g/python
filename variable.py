@@ -10,6 +10,12 @@ user_name = "Prince"
 # 4. Boolean (True or False)
 is_logged_in = True
 
+country = "India"
+
 # Printing the variables to see their value
 print(age)
+print(price)
 print(user_name)
+print(is_logged_in)
+print(country)
+
