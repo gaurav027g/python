@@ -2,12 +2,12 @@
 Myname = "Gaurav Kumar"
 Firstname = "Gaurav"
 Secondname = "Kumar"
-Randomname = "GauravsfsfsdKumarasdfdeqgefegdffs"
+Randomname = "GauravsfsfsdsKumarasdfdeqgefegdffs"
 
 #Results
 FullName1 = Firstname + Secondname
 FullName2 = Firstname + " " + Secondname
-RandomnametoMyname = Randomname[0:6] + " " + Randomname[12:17]
+RandomnametoMyname = Randomname[0:6] + " " + Randomname[13:18]
 
 print(FullName1)
 print(FullName2)
