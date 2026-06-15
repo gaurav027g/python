@@ -15,9 +15,11 @@ Result4 = age3 / age2
 
 #Mixed
 Result5 = age1 + age2 - age3 * age2 / age1
+Result6 = age1 - age3 / age2 * age1
 
 print(Result1)
 print(Result2)
 print(Result3)
 print(Result4)
 print(Result5)
+print(Result6)
