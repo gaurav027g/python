@@ -8,5 +8,5 @@ if age > 13:
     if name == "Bob":
                 print("you get special privilages")
     else: 
-                print("you are elligible for facebook")
+                print("you are elligible for amazon")
         
