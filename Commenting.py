@@ -4,8 +4,12 @@ if 3 > 2:
 # > compares the first object to the second object
 # If is a conditional statement
 
-"""
+print("""
+
 dgwduwg
+
 wdguwedie2d
+
 dvdeegijuidhei
-"""
+
+""")
