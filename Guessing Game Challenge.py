@@ -25,4 +25,4 @@ while correct == False:
         print("Ha! You thought of " + str(lowerGuess + 1))
         correct = True
 
-#Abhi tak hum ye sara code sikh nahi paye hain ki kaise ye perfect tarike se kaam kar raha hai
+#Abhi tak hum ye sara code sikh nahi paye hain, ki kaise ye perfect tarike se kaam kar raha hai
