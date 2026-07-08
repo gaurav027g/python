@@ -1,18 +1,28 @@
+correct = False
+lowerGuess = 0
+higherGuess = 100
 guess = 50
 
-print("Think of a number between 1 and 100.")
+print("Enter 0 for guessing lower, 1 for higher, and 2 if it's correct.")
 
-while True:
-    print("My guess is:", guess)
+while correct == False:
+    print(guess)
 
-    user = input("Enter 0 (lower), 1 (higher), 2 (correct): ")
+    userInput = input()
+    if userInput == "0":
+        higherGuess = guess
+        guess = round((higherGuess - lowerGuess) / 2) + lowerGuess
 
-    if user == "0":
-        guess = guess - 10
+    elif userInput == "1":
+        lowerGuess = guess
+        guess = round((higherGuess - lowerGuess) / 2) + lowerGuess
 
-    elif user == "1":
-        guess = guess + 10
+    elif userInput == "2":
+        print("Ha! You thought of " + str(guess))
+        correct = True
 
-    elif user == "2":
-        print("Yay! I guessed your number.")
-        break
+    if (higherGuess - lowerGuess) == 2:
+        print("Ha! You thought of " + str(lowerGuess + 1))
+        correct = True
+
+#Abhi tak hum ye sara code sikh nahi paye hain ki kaise ye perfect tarike se kaam kar raha hai
