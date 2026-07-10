@@ -33,4 +33,4 @@ for p in range(0,5):
 
 for p in range(0,5):
      print(p)
-     time.sleep(1)
+     time.sleep(0.7)
