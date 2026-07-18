@@ -6,4 +6,4 @@ stock = input("Enter Your Stock: ")
 url = url + stock #Concatenation of string
 print(url)
 data = urllib.request.urlopen(url).read()
-
+data1 = 
