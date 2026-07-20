@@ -18,3 +18,4 @@ start = 0
 end = m.end()-3
 final = newString1[0:end]
 print("The value of " + stock.upper() + " is " + final)
+
