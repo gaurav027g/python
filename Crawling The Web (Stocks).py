@@ -1,5 +1,6 @@
-import ssl
+import re
 import urllib.request
+import ssl
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -12,5 +13,5 @@ data = urllib.request.urlopen(url).read()
 data1 = data.decode("utf-8")
 print(data1)
 
-p = ssl.search('meta itemprop = "price"',data1)
+p = re.search('meta itemprop="price"',data1)
 print(p)
