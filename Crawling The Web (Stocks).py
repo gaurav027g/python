@@ -1,17 +1,17 @@
-import re
-import urllib.request
-import ssl
+import yfinance as yf
 
-ssl._create_default_https_context = ssl._create_unverified_context
-
-#https://www.google.com/finance?q=
-url = "https://www.google.com/finance?q="
 stock = input("Enter Your Stock: ")
-url = url + stock #Concatenation of string
-print(url)
-data = urllib.request.urlopen(url).read()
-data1 = data.decode("utf-8")
-print(data1)
 
-p = re.search('meta itemprop="price"',data1)
-print(p)
+stock = stock.upper()      # Convert into capital letters
+
+share = yf.Ticker(stock)
+
+price = share.history(period="1d")    # Get today's stock data
+
+current_price = price["Close"]
+
+current_price = current_price.iloc[-1]    # Last closing price
+
+print("The value of " + stock + " is " + str(round(current_price, 2)))
+
+#sir jo bataye the udemy wale wo code nahi hai ye, ye dusara code hai keuki 2026 me aisa hi code chalta hai aur sir ka 2015 ka code tha wo
