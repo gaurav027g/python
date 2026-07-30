@@ -21,4 +21,17 @@ print(soup.find_all(id = 'link2'))
 print(soup.find_all("a", id = 'link2'))
 
 import re
-for tag in soup.find_all(re.compile('b'))
+for tag in soup.find_all(re.compile('b')):
+    print(tag.name)
+
+for tag in soup.find_all(re.compile('t')):
+    print(tag.name)
+
+print(soup.find_all('title'))
+
+print(soup.find_all(href = re.compile('elsie')))
+
+print(soup.find_all(href = re.compile('elsie'), id = 'link1'))
+
+for tag in soup.find_all(re.compile('b')):
+    print(tag)
