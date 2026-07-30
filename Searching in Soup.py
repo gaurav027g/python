@@ -20,3 +20,5 @@ print(soup.find_all('a'))
 print(soup.find_all(id = 'link2'))
 print(soup.find_all("a", id = 'link2'))
 
+import re
+for tag in soup.find_all(re.compile('b'))
