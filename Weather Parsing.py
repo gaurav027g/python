@@ -12,3 +12,5 @@ data3 = data2.find('strong', {'class':'temp'})
 print(data3)
 print(data3.contents)
 print(data3.contents[0])
+
+#its not working, because the code is according to the 2015year, its not working in today's year
