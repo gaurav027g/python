@@ -18,5 +18,7 @@ pt.yticks(pos, names)
 
 pt.subplots_adjust(left = 0.11, bottom = 0.12, right = 0.94)
 
-pt.show()
+pt.gcf().set_facecolor('lightblue')
+pt.gca().set_facecolor('gray')
 
+pt.show()
