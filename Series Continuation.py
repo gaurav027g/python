@@ -10,23 +10,24 @@ print(s)
 
 print(s["b"])
 
-p = {"Bihar": "12.8 crore", "Uttar Pradesh": "24.3 crore", "Maharashtra": "12.9 crore", "West bangal": "9.1 crore", "Rajasthan":
-     "6.8 crore"}
+p = {"Bihar": 12.8, "Uttar Pradesh": 24.3, "Maharashtra": 12.9, "West bangal": 9.1, "Rajasthan": 6.8}
 cities = pd.Series(p)
 print(cities)
 
-print(cities > "6 crore")
-cities["Bihar"] = "12.9 crore"
-print(cities)
-#some problem
+print(cities > 6)
 
-cities[cities > "12 crore"] = "10 crore"
+cities["Bihar"] = 12.9
 print(cities)
-#some problem
+
+cities[cities > 12] = 10
+print(cities)
 
 print('Bihar' in cities)
 print('Punjab' in cities)
 
 import numpy as np
-np.square(cities)
-#some problem
+print(np.square(cities))
+
+print(cities.isnull())
+
+print(cities/10)
