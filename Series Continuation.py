@@ -18,11 +18,15 @@ print(cities)
 print(cities > "6 crore")
 cities["Bihar"] = "12.9 crore"
 print(cities)
+#some problem
 
 cities[cities > "12 crore"] = "10 crore"
 print(cities)
+#some problem
 
 print('Bihar' in cities)
 print('Punjab' in cities)
 
-print(cities/10)
+import numpy as np
+np.square(cities)
+#some problem
