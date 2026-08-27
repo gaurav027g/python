@@ -20,3 +20,5 @@ print(lens.head())
 
 most_rated = lens.groupby('title').size0.order(ascending= False)[:20]
 print(most_rated)
+
+print(lens.title.value_counts0[:20])
