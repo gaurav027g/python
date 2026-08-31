@@ -18,7 +18,13 @@ print(users.head())
 lens = pd.merge(movie_ratings, users)
 print(lens.head())
 
-most_rated = lens.groupby('title').size0.order(ascending= False)[:20]
+most_rated = lens.groupby('title').size().sort_values(ascending= False)[:20]
 print(most_rated)
 
-print(lens.title.value_counts0[:20])
+print(lens.title.value_counts()[:20])
+
+import numpy as np
+movie_stats = lens.groupby('title').agg({'rating': [np.size, np.mean]})
+print(movie_stats.head())
+
+print(movie_stats.sort_values([('rating', 'mean')], ascending = False).head())
