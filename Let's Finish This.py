@@ -29,9 +29,6 @@ print(movie_stats.head())
 
 print(movie_stats.sort_values([('rating', 'mean')], ascending = False).head())
 
-import matplotlib.pyplot as plt
-plt.title("Distribution of Users Age")
-plt.xlabel('age')
-plt.ylabel('count of users')
-users.age.hist(bins = 30)
-plt.show()
+
+most_50 = lens.groupby('movie_id').size().sort_values(ascending = False)[:50]
+print(most_50)
