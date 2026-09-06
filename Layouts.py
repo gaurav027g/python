@@ -1,12 +1,22 @@
 from tkinter import*
 root = Tk()
 
+topFrame = Frame(root)
+topFrame.pack()
 
+botFrame = Frame(root)
+botFrame.pack(side=BOTTOM)
 
-theButton = Button(None,text = "Click Me!", fg = "Blue")
-theButton.pack()
+Button1 = Button(topFrame,text = "Click Me!", fg = "Blue")
+Button1.pack(side=LEFT)
 
-thButton = Button(None,text = "Hello!", fg = "Red")
-thButton.pack()
+Button2 = Button(topFrame,text = "Hello!", fg = "Red")
+Button2.pack()
+
+Button3 = Button(botFrame,text = "Click Me!", fg = "Blue")
+Button3.pack(side=LEFT)
+
+Button4 = Button(botFrame,text = "Hello!", fg = "Red")
+Button4.pack()
 
 root.mainloop()
