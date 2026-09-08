@@ -11,12 +11,12 @@ Button1 = Button(topFrame,text = "Click Me!", fg = "Blue")
 Button1.pack(side=LEFT)
 
 Button2 = Button(topFrame,text = "Hello!", fg = "Red")
-Button2.pack()
+Button2.pack(side=LEFT)
 
 Button3 = Button(botFrame,text = "Click Me!", fg = "Blue")
 Button3.pack(side=LEFT)
 
 Button4 = Button(botFrame,text = "Hello!", fg = "Red")
-Button4.pack()
+Button4.pack(side=LEFT)
 
 root.mainloop()
