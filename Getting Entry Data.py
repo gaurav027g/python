@@ -7,5 +7,4 @@ def evaluate():
 e = Entry(root)
 e.bind("<Return>", evalute)
 
-
 root.mainloop()
