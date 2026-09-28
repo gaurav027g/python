@@ -16,6 +16,17 @@ def btnPress(num):
     equa = equa + str(num)
     equation.set(equa)
 
+def EqualPress():
+    global equa
+    total = str(eval(equa))
+    equation.set(total)
+    equa = ""
+
+def clear():
+    global equa
+    equa = ""
+    equation.set("")
+
 Button0 = Button(root, text="0", command=lambda:btnPress(0))
 Button0.grid(row=4,column=1)
 
@@ -58,10 +69,10 @@ Multiply.grid(row=3,column=3)
 Divide = Button(root, text="/", command=lambda:btnPress("/"))
 Divide.grid(row=4,column=3)
 
-Equal = Button(root, text="=")
+Equal = Button(root, text="=", command=EqualPress)
 Equal.grid(row=4, column=2)
 
-Clear = Button(root, text="C")
+Clear = Button(root, text="C", command=clear)
 Clear.grid(row=4, column=0)
 
 root.mainloop()
