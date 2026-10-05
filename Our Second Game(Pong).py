@@ -20,7 +20,6 @@ class Ball:
 
 
 
-
 ball = Ball(canvas, "orange")
 
 while 1:
