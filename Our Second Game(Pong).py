@@ -18,8 +18,6 @@ class Ball:
         self.id = canvas.create_oval(10,10,25,25, fill=color)
         self.canvas.move(self.id, 240,260)
 
-
-
 ball = Ball(canvas, "orange")
 
 while 1:
