@@ -36,10 +36,36 @@ class Ball:
         if pos[2]>=self.canvas_width:
             self.x=-3
 
+class Paddle:
+    def __init__(self, canvas, color):
+        self.canvas = canvas
+        self.id = canvas.create_rectangle(0,150,30,250, fill = color)
+        self.y = 0
+        self.canvas_height = self.canvas.winfo_height()
+        self.canvas_width = self.canvas.winfo_width()
+        self.canvas.bind_all('a', self.turn_left)
+        self.canvas.bind_all('d', self.turn_right)
+
+    def draw(self):
+        self.canvas.move(self.id, 0,self.y)
+        pos = self.canvas.coords(self.id)
+        if pos[1]<=0:
+            self.y = 0
+        if pos[2]>=400:
+            self.y = 0
+
+    def turn_left(self,evt):
+        self.y = -3
+
+    def turn_right(self,evt):
+        self.y = 3
+
 ball = Ball(canvas, "orange")
+paddle = Paddle(canvas, "blue")
 
 while 1:
     ball.draw()
+    paddle.draw()
     tk.update_idletasks()
     tk.update()
     time.sleep(0.01)
