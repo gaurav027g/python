@@ -155,3 +155,7 @@ while 1:
         paddle1.y = 0
         canvas.create_text(250,200, text = "Congrats Player 2! You Win!", font = 32, fill = "red")
         canvas.create_text(250,215, text = "Score: " + str(counter) + " - " + str(counter1), font =32, fill = "red")
+
+    if counter == 10 or counter1 == 10:
+        tk.update()
+        time.sleep(10000)
