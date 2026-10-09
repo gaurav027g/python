@@ -1,6 +1,10 @@
 from tkinter import*
 import random
 import time
+
+counter = 0
+counter1 = 0
+
 tk = Tk()
 tk.title("Pong")
 tk.resizable(0,0)
@@ -25,6 +29,8 @@ class Ball:
         self.y=-3
         self.canvas_height = self.canvas.winfo_height()
         self.canvas_width = 500
+        self.counter = 0
+        self.counter1 = 0
 
     def hit_paddle(self, pos):
         paddle_pos = self.canvas.coords(self.paddle.id)
@@ -49,12 +55,30 @@ class Ball:
             self.y=-3
         if pos[0]<=0:
             self.x=3
+            self.score(True)
         if pos[2]>=self.canvas_width:
             self.x=-3
+            self.score(False)
         if self.hit_paddle(pos)==True:
             self.x=3
         if self.hit_paddle1(pos)==True:
             self.x=-3
+
+    def score(self, val):
+        global counter
+        global counter1
+
+        if val == True:
+            a = self.canvas.create_text(125,40, text = counter, font = ("Arial", 60), fill = "white")
+            canvas.itemconfig(a,fill = "black")
+            counter += 1
+            a = self.canvas.create_text(125,40, text = counter, font = ("Arial", 60), fill = "white")
+
+        if val == False:
+            a = self.canvas.create_text(375,40, text = counter1, font = ("Arial", 60), fill = "white")
+            canvas.itemconfig(a,fill = "black")
+            counter1 += 1
+            a = self.canvas.create_text(375,40, text = counter1, font = ("Arial", 60), fill = "white")
 
 class Paddle:
     def __init__(self, canvas, color):
@@ -115,3 +139,19 @@ while 1:
     tk.update_idletasks()
     tk.update()
     time.sleep(0.01)
+
+    if counter == 10:
+        ball.x = 0
+        ball.y = 0
+        paddle.y = 0
+        paddle1.y = 0
+        canvas.create_text(250,200, text = "Congrats Player 1! You Win!", font = 32, fill = "red")
+        canvas.create_text(250,215, text = "Score: " + str(counter) + " - " + str(counter1), font =32, fill = "red")
+
+    if counter == 10:
+        ball.x = 0
+        ball.y = 0
+        paddle.y = 0
+        paddle1.y = 0
+        canvas.create_text(250,200, text = "Congrats Player 2! You Win!", font = 32, fill = "red")
+        canvas.create_text(250,215, text = "Score: " + str(counter) + " - " + str(counter1), font =32, fill = "red")
